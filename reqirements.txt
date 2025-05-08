@@ -1,0 +1,10 @@
+datasets
+einops
+langchain
+langchain-community
+langchain-huggingface
+langchain-openai
+langgraph
+faiss-cpu
+rich
+fastapi[standard]

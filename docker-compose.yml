@@ -1,0 +1,31 @@
+services:
+  ollama-gpu:
+    image: ollama-gpu:latest
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    networks:
+      - my-network
+
+  medical-chatbot_container:
+    image: medical-chatbot:latest
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - jina_embeddings_cache:/root/.cache/huggingface/hub
+      - faiss_db:/app/faissDB_Collection
+    ports:
+      - "8714:8000"
+    depends_on:
+      - ollama-gpu
+    networks:
+      - my-network
+
+volumes:
+  jina_embeddings_cache:
+  faiss_db:
+
+networks:
+  my-network:
+    driver: bridge
