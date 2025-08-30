@@ -1,3 +1,17 @@
+# **Project**
+## **Introduction**
+This project implements a medical chatbot using a Large Language Model (LLM) and a Vector Database for knowledge retrieval. It leverages Docker for containerization and FastAPI for exposing API endpoints.
+
+## **Structure**
+
+- `api_ChatBot_v1.py`: Contains the API endpoints for the chatbot.
+- `docker-compose.yml`: Defines the services for running the application with Docker Compose.
+- `Dockerfile`: Specifies the steps to build the Docker image for the medical chatbot.
+- `MedicalChatBot_v1.py`: The core script for the medical chatbot logic.
+- `README.md`: This file, providing an overview and setup instructions.
+- `reqirements.txt`: Lists the Python dependencies required for the project.
+- `vectorDB_from_Dataset.py`: Script for creating a vector database from a dataset.
+
 # **Setup Instructions**
 ## **Part 1: download and configure ollama image**
 **step 1:** download ollama image
